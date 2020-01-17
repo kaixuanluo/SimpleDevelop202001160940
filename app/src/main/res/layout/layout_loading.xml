@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android2droid.simpledevelop202001160940.mvp.base.view.layout.LoadStatesLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loading_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <com.android2droid.simpledevelop202001160940.mvp.base.view.layout.LoadingFixedFlipper
+        android:id="@+id/flp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <FrameLayout
+            android:id="@+id/load_content_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/load_error_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:src="@drawable/theme_no_data_icon" />
+
+            <TextView
+                android:id="@+id/load_error_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="加载失败点击重试"
+                android:textSize="28dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/load_empty_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/iv_empty"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_marginBottom="33dp"
+                android:src="@drawable/theme_no_data_icon" />
+
+            <TextView
+                android:id="@+id/tv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="暂无数据"
+                android:textColor="#FF858585"
+                android:textSize="28dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/loading_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/load_offline_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_marginBottom="33dp"
+                android:src="@drawable/theme_no_data_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </com.android2droid.simpledevelop202001160940.mvp.base.view.layout.LoadingFixedFlipper>
+
+</com.android2droid.simpledevelop202001160940.mvp.base.view.layout.LoadStatesLayout>
